@@ -1,17 +1,275 @@
+
 @font-face {
     font-family: Lora;
     src: url(../fonts/Lora-Regular.ttf);
 }
 html, body {
-    font-family: "Lora", serif;
-    font-size: 16px;
-    color: #797979;
-    text-align: center;
+  font-size: 16px;
+  color: #797979;
+  font-family: "Lora", serif;
+  vertical-align: baseline;
+  line-height: 26px;
+  font-weight: 400;
 }
+/* ....................................
+1.1 Reset CSS 
+.......................................*/
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
+a {
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: none;
+    color: #096b89;
+  }
+  a:active {
+    outline: 0 none;
+    text-decoration: none;
+  }
+  a:focus {
+    outline: 0px solid;
+    text-decoration: none;
+  }
+p {
+    margin: 0 0 26px;
+  }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 0 26px;
+  font-weight: 600;
+}
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+  }
+/*** Section ***/
+.section {
+    padding: 100px 0;
+  }
+  @media only screen and (max-width: 992px) {
+    .section {
+      padding: 75px 0;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .section {
+      padding: 60px 0;
+    }
+  }
+  .section2 {
+    padding: 100px 0 70px;
+  }
+  @media only screen and (max-width: 992px) {
+    .section2 {
+      padding: 75px 0 45px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .section2 {
+      padding: 60px 0 30px;
+    }
+  }
+
+.section4 {
+    padding-bottom: 100px;
+  }
+  @media only screen and (max-width: 992px) {
+    .section4 {
+      padding-bottom: 75px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .section4 {
+      padding-bottom: 60px;
+    }
+  }
+  .section5 {
+    padding-top: 100px;
+  }
+  @media only screen and (max-width: 992px) {
+    .section5 {
+      padding-top: 75px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .section5 {
+      padding-top: 60px;
+    }
+  }
+  .section-heading {
+    text-align: center;
+    display: block;
+    position: relative;
+    margin: 0 0 40px;
+  }
+  .section-heading h2 {
+    font-family: "Agency FB";
+    font-weight: 400;
+    font-size: 50px;
+    margin: 0 0 15px;
+    color: #222222;
+  }
+  @media only screen and (max-width: 992px) {
+    .section-heading h2 {
+      font-size: 46px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .section-heading h2 {
+      font-size: 36px;
+    }
+  }
+  .section-heading p {
+    color: #797979;
+    margin: 0 auto;
+    display: block;
+    width: 60%;
+  }
+  @media only screen and (max-width: 992px) {
+    .section-heading p {
+      width: 85%;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .section-heading p {
+      width: 95%;
+    }
+  }
+  .bgimgst {
+    display: block;
+  }
+  @media only screen and (max-width: 480px) {
+    .bgimgst {
+      display: none;
+    }
+  }
+  .bgimgst:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -26px;
+    bottom: 0;
+    z-index: -1;
+    background: url(../img/8.png) no-repeat left top;
+  }
+  .bgimgst:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -26px;
+    bottom: 0;
+    z-index: -1;
+    background: url(../img/9.png) no-repeat right top;
+  }
+  .bgimgsb {
+    display: block;
+  }
+  @media only screen and (max-width: 480px) {
+    .bgimgsb {
+      display: none;
+    }
+  }
+  .bgimgsb:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -26px;
+    z-index: -1;
+    background: url(../img/7.png) no-repeat left bottom;
+  }
+  .bgimgsb:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: -26px;
+    z-index: -1;
+    background: url(../img/7.png) no-repeat right bottom;
+  }
+  /***Button***/
+  .btn1 {
+    display: inline-block;
+    position: relative;
+    padding: 0 30px;
+    line-height: 50px;
+    height: 50px;
+    background: #965454;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    border-radius: 50px;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .btn1:hover {
+    background: #773b3b;
+    color: #fff;
+  }
+
+  /*** Reset ***/
+  .af:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  .bg-img {
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
+
+  /*owl Paginations*/
+.family-area .owl-controls {
+  margin: 60px 0 0;
+}
+.family-area .owl-controls .owl-pagination .owl-page {
+  padding: 0 2px;
+}
+.response{
+	margin-top:-13px;
+}
+.family-area .owl-controls .owl-pagination .owl-page span {
+  width: 10px;
+  height: 10px;
+  background: #d3d3d3;
+  opacity: 1;
+  position: relative;
+  margin: 0 3px;
+}
+.family-area .owl-controls .owl-pagination .owl-page.active span {
+  background: #965454;
+}
+
 /* Home -----------------------------------------------------*/
 a {
     color: inherit;
@@ -121,6 +379,133 @@ ul {
     visibility: hidden;
 }
 
+/*....................................
+2. Header area start here
+....................................*/
+.about_title {
+  position: relative  
+}
+.about_title .bgimg {
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .about_title .bgimg {
+    display: none;
+  }
+}
+.about_title .bgimg:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 34px;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background: url(../img/5.png) no-repeat left bottom;
+}
+.about_title .bgimg:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 34px;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background: url(../img/6.png) no-repeat right bottom;
+}
+.about_title .bgimgt {
+  display: block;
+}
+@media only screen and (max-width: 480px) {
+  .about_title .bgimgt {
+    display: none;
+  }
+}
+.about_title .bgimgt:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background: url(../img/4.png) no-repeat left top;
+}
+.about_title .bgimgt:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  z-index: -1;
+  background: url(../img/4.png) no-repeat right top;
+}
+.about_title .logo-area {
+  display: block;
+  text-align: center;
+  padding: 100px 0 85px;
+}
+@media only screen and (max-width: 992px) {
+  .about_title .logo-area {
+    padding: 80px 0 70px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .about_title .logo-area {
+    padding: 60px 0 50px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .about_title .logo-area {
+    padding: 50px 0;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+}
+.about_title .logo-area .content {
+  display: inline-block;
+  position: relative;
+}
+.about_title .logo-area .content h2 {
+  font-family: "Agency FB";
+  font-weight: 400;
+  color: #111111;
+  font-size: 60px;
+  margin: 0 0 10px;
+}
+.about_title .logo-area .content h2 span {
+  color: #965454;
+}
+.about_title .logo-area .content p {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #965454;
+  padding: 10px 15px;
+  letter-spacing: 2px;
+  border-top: 1px solid #965454;
+  border-bottom: 1px solid #965454;
+}
+.about_title .logo-area .content:after {
+  content: '';
+  position: absolute;
+  left: -219px;
+  top: -42px;
+  bottom: -32px;
+  width: 177px;
+  background: url(../img/2.png) no-repeat left;
+}
+.about_title .logo-area .content:before {
+  content: '';
+  position: absolute;
+  right: -219px;
+  top: -42px;
+  bottom: -32px;
+  width: 177px;
+  background: url(../img/3.png) no-repeat left;
+}
+
 /* About ----------------------------------------------------*/
 .about_head {
     display: grid;
@@ -201,165 +586,10 @@ ul {
     font-size: 30px;
     color: #fff;
 }
-.ab_text_3 {
-    background-color: #965454;
-    width: auto;
-    height: 200px;
-    font-size: 30px;
-    color: #fff;
-    padding-top: 40px;
-}
-.timer {
-    display: grid;
-    grid-template-columns:  repeat(6, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    font-size: 25px;
-}
-.timer__box1 { grid-area: 1 / 1 / 2 / 2; }
-.timer__box2 { grid-area: 1 / 2 / 2 / 3; }
-.timer__box3 { grid-area: 1 / 3 / 2 / 4; }
-.timer__box4 { grid-area: 1 / 4 / 2 / 5; }
-.timer__box5 { grid-area: 1 / 5 / 2 / 6; }
-.timer__box6 { grid-area: 1 / 6 / 2 / 7; }
-.timer__box7 { 
-    grid-area: 2 / 2 / 3 / 3;
-    position: relative;
-    bottom: 70px;
-    text-align: end;
-    width: 100px;
-}
-.timer__box8 { 
-    grid-area: 2 / 3 / 3 / 4;
-    position: relative;
-    bottom: 70px;
-    text-align: end;
-    width: 110px;
-}
-.timer__box9 { 
-    grid-area: 2 / 4 / 3 / 5; 
-    position: relative;
-    bottom: 70px;
-    text-align: end;
-    width: 120px;
-}
-.timer__box10 { 
-    grid-area: 2 / 5 / 3 / 6; 
-    position: relative;
-    bottom: 70px;
-    text-align: end;
-    width: 130px;
-}
-.circle_1 {
-    width: 140px;
-    height: 140px;
-    background: #fff;
-    -moz-border-radius: 80px;
-    -webkit-border-radius: 80px;
-    border-radius: 80px;
-    position: relative;
-    bottom: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.circle_2 {
-    width: 120px;
-    height: 120px;
-    background: #965454;
-    -moz-border-radius: 70px;
-    -webkit-border-radius: 70px;
-    border-radius: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 40px;
-    color: #fff;
-}
+
 
 /* Story ----------------------------------------------------*/
-.story {
-    margin-top: -70px;
-}
-.st_title {
-    font-size: 50px;
-    color: #000;
-    padding-bottom: 15px;
-}
-.st_text {
-    width: 800px;
-    margin: 0 auto;
-    padding-bottom: 25px;
-}
-.st_btn {
-    background-color: #965454;
-    padding: 15px;
-    border-radius: 20px;
-    color: #fff;
-}
-.st_bg {
-    background-color: #bfbfbf;
-    width: auto;
-    height: 500px;
-    position:relative; 
-    top: -380px;
-    z-index: 1;
-}
 
-.st_name {
-    font-weight: 400;
-    color: #fff;
-    font-size: 50px;
-    margin: 0 0 5px;
-}
-.st_parent {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    justify-items:center;
-    position: relative;
-    z-index: 2;
-}
-    
-.st_grid1 {
-    grid-area: 1 / 1 / 2 / 2;
-    background-color: #fff;
-    width: 440px;
-	height: 440px;
-	-moz-border-radius: 220px;
-	-webkit-border-radius: 220px;
-	border-radius: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.st_grid2 {
-    grid-area: 1 / 2 / 2 / 3;
-    background-color: #fff;
-    width: 440px;
-	height: 440px;
-	-moz-border-radius: 220px;
-	-webkit-border-radius: 220px;
-	border-radius: 220px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
-.st_grid3 {grid-area: 2 / 1 / 3 / 2;}
-.st_grid4 {grid-area: 2 / 2 / 3 / 3;}
-.st_grid5 {grid-area: 3 / 1 / 4 / 2;}
-.st_grid6 {grid-area: 3 / 2 / 4 / 3;}
-.st_grid7 {
-    grid-area: 4 / 1 / 5 / 2;
-    display: flex;
-    justify-content:space-evenly;
-}
-.st_grid8 {grid-area: 4 / 2 / 5 / 3;}
-.polygon2 {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    top: -50px;
-}
 
 
 /* Event ----------------------------------------------------*/
@@ -370,6 +600,9 @@ ul {
 /* Contact --------------------------------------------------*/
 /* Footer ---------------------------------------------------*/
 /* Responsive -----------------------------------------------*/
+@media (max-width: 1024px) {
+}
+
 @media (min-width: 769px) {
     .nav__link--drop:hover::after {
         transform: rotate(180deg);
@@ -458,8 +691,7 @@ ul {
         visibility: visible;
         transition: all 0.3s;
     }
-    .timer__box1, 
-    .timer__box6 {display: none;}
+  
 }
 @media (max-width: 540px) {
     .ab_text_3 {
@@ -497,20 +729,1040 @@ ul {
     .ab_bg {
         height: 240px;
       }
-   
 }
 @media (max-width: 320px) {
-    .circle_1 {
-        width: 70px;
-        height: 70px;
-      }
-      .circle_2 {
-        width: 60px;
-        height: 60px;
-        font-size: 30px;
-      }
-      .timer {
-        font-size: 18px;
-        padding-top: 20px;
-      }
+
+}
+
+/*....................................
+4. About area start here
+....................................*/
+.persons-area {
+    display: block;
+    position: relative;
+    background: url(/img/bg-1.jpg);
+  }
+  @media only screen and (max-width: 768px) {
+    .persons-area {
+      padding: 60px 0;
+    }
+  }
+  .persons-area:after {
+    background: rgba(0, 0, 0, 0.85);
+  }
+  .persons-area .container {
+    position: relative;
+    z-index: 999;
+  }
+  .persons-area .persons {
+    display: block;
+    position: relative;
+    padding: 0 70px;
+    text-align: center;
+  }
+  @media only screen and (max-width: 992px) {
+    .persons-area .persons {
+      padding: 0 20px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .persons-area .persons {
+      margin: 0 0 40px;
+    }
+  }
+  .persons-area .persons figure {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: -227px 0 40px;
+    padding: 10px 10px 0;
+  }
+  @media only screen and (max-width: 768px) {
+    .persons-area .persons figure {
+      margin: 0 0 30px;
+    }
+  }
+  .persons-area .persons figure img {
+    width: 100%;
+    border: 15px solid #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .persons-area .persons figure h2 {
+    position: absolute;
+    height: 60px;
+    line-height: 60px;
+    background: #965454;
+    color: #fff;
+    font-family: "Agency FB";
+    font-weight: 400;
+    font-size: 40px;
+    padding: 0 100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: inline-block;
+    margin: 0;
+    -webkit-clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 0);
+    clip-path: polygon(100% 0, 90% 50%, 100% 100%, 0 100%, 10% 50%, 0 0);
+  }
+  @media only screen and (max-width: 992px) {
+    .persons-area .persons figure h2 {
+      padding: 0 20px;
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .persons-area .persons figure h2 {
+      font-size: 36px;
+    }
+  }
+  .persons-area .persons:hover figure img {
+    box-shadow: 0 -3px 15px rgba(0, 0, 0, 0.3);
+  }
+  .persons-area .persons .content {
+    display: block;
+    position: relative;
+  }
+  .persons-area .persons .content h3 {
+    font-family: "Agency FB";
+    font-weight: 400;
+    color: #fff;
+    font-size: 50px;
+    margin: 0 0 5px;
+  }
+  @media only screen and (max-width: 480px) {
+    .persons-area .persons .content h3 {
+      font-size: 40px;
+    }
+  }
+  .persons-area .persons .content p {
+    color: #fff;
+    font-style: italic;
+    opacity: 0.5;
+  }
+  .persons-area .persons .content ul li {
+    display: inline-block;
+    padding: 0 2px;
+  }
+  .persons-area .persons .content ul li a {
+    display: block;
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    background: rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.5);
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+  }
+  .persons-area .persons .content ul li a:hover {
+    background: #965454;
+    color: #fff;
+  }
+
+/*....................................
+6. Banner area start here
+....................................*/
+.counter-area {
+  display: block;
+  position: relative;
+  padding: 80px 0 130px;
+  background: #965454;
+  text-align: center;
+  margin: 0;
+}
+@media only screen and (max-width: 480px) {
+  .counter-area {
+    padding: 60px 0 40px;
+  }
+}
+.counter-area .counter-con {
+  display: block;
+  position: relative;
+}
+.counter-area .counter-con h2 {
+  font-size: 40px;
+  font-family: "Agency FB";
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+.counter-area .counter-list {
+  position: absolute;
+  top: 100%;
+  margin-top: 60px;
+  z-index: 999;
+  left: 0;
+  right: 0;
+}
+@media only screen and (max-width: 480px) {
+  .counter-area .counter-list {
+    position: relative;
+  }
+}
+.counter-area .counter-list ul {
+  clear: both;
+}
+.counter-area .counter-list ul::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.counter-area .counter-list ul li {
+  display: inline-block;
+  padding: 0 10px;
+}
+@media only screen and (max-width: 480px) {
+  .counter-area .counter-list ul li {
+    margin: 0 0 60px;
+  }
+}
+.counter-area .counter-list ul li:first-child {
+  padding-left: 0;
+}
+.counter-area .counter-list ul li:last-child {
+  padding-left: 0;
+}
+.counter-area .counter-list ul li .count-con {
+  display: block;
+  width: 142px;
+  height: 142px;
+  line-height: 122px;
+  border: 10px solid #fff;
+  margin: 0 auto;
+  background: #965454;
+  cursor: pointer;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.counter-area .counter-list ul li .count-con span {
+  display: block;
+  font-size: 50px;
+  color: #fff;
+  font-family: "Agency FB";
+}
+.counter-area .counter-list ul li .count-con p {
+  margin: 15px 0 0;
+  line-height: 26px;
+  font-size: 18px;
+  text-transform: capitalize;
+  color: #222222;
+}
+@media only screen and (max-width: 480px) {
+  .counter-area .counter-list ul li .count-con p {
+    color: #fff;
+  }
+}
+.counter-area .counter-list ul li .count-con:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+  .love-story {
+    display: block;
+    position: relative;
+    padding: 200px 0 317px;
+  }
+  @media only screen and (max-width: 768px) {
+    .love-story {
+      padding: 60px 0;
+    }
+  }
+  .love-story .love-story-con {
+    display: block;
+    position: relative;
+    text-align: center;
+  }
+  .love-story .love-story-con h2 {
+    font-size: 50px;
+    font-family: "Agency FB";
+    font-weight: 400;
+    color: #222;
+  }
+  @media only screen and (max-width: 480px) {
+    .love-story .love-story-con h2 {
+      font-size: 40px;
+    }
+  }
+  .love-story .love-story-con a {
+    padding: 0 65px;
+  }
+  /*....................................
+21. Event area start here
+....................................*/
+.event-area {
+    position: relative;
+    padding-bottom: 125px;
+  }
+  @media only screen and (max-width: 992px) {
+    .event-area {
+      padding-bottom: 100px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .event-area {
+      padding-bottom: 85px;
+    }
+  }
+  .event-area .event-list {
+    display: block;
+    position: relative;
+    text-align: center;
+    margin: 0 0 30px;
+  }
+  .event-area .event-list .time {
+    display: inline-block;
+    background: #965454;
+    color: #fff;
+    line-height: 64px;
+    height: 64px;
+    padding: 0 30px;
+    text-transform: uppercase;
+    font-family: "Agency FB";
+    font-size: 30px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    position: relative;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .event-area .event-list .content {
+    display: block;
+    position: relative;
+    background: #965454;
+    margin: -32px 0 0;
+    padding: 72px 40px;
+  }
+  .event-area .event-list .content h2 {
+    font-family: "Agency FB";
+    font-weight: 400;
+    color: #fff;
+    font-size: 40px;
+    padding: 0 0 15px;
+    margin: 0 0 15px;
+    position: relative;
+  }
+  .event-area .event-list .content h2:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #fff;
+    width: 80px;
+    margin: 0 auto;
+  }
+  .event-area .event-list .content h3 {
+    font-family: "Agency FB";
+    font-weight: 400;
+    color: #fff;
+    font-size: 30px;
+  }
+  .event-area .event-list .content span {
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    margin: 0 0 20px;
+  }
+  .event-area .event-list .content p {
+    margin: 0;
+    color: #fff;
+    opacity: 0.5;
+  }
+  .event-area .event-list:hover .time {
+    box-shadow: none;
+    background: #773b3b;
+  }
+  /*....................................
+  13. Testimonial area start here
+  ....................................*/
+
+  .testimonial-area {
+    position: relative;
+    display: block;
+    background: url(bg-1.jpg);
+  }
+  .testimonial-area:after {
+    background: rgba(0, 0, 0, 0.85);
+  }
+  .testimonial-area .container {
+    position: relative;
+    z-index: 999;
+  }
+  .testimonial-area .quet {
+    position: absolute;
+    top: -155px;
+    width: 110px;
+    height: 110px;
+    line-height: 90px;
+    text-align: center;
+    background: #222;
+    border: 10px solid #fff;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+  }
+  @media only screen and (max-width: 992px) {
+    .testimonial-area .quet {
+      top: -130px;
+    }
+  }
+  @media only screen and (max-width: 768px) {
+    .testimonial-area .quet {
+      top: -115px;
+    }
+  }
+  .testimonial-area .testimonial {
+    text-align: center;
+  }
+  .testimonial-area .testimonial h2 {
+    font-family: "Agency FB";
+    font-size: 50px;
+    color: #fff;
+    font-weight: 400;
+    margin: 0 0 10px;
+  }
+  @media only screen and (max-width: 480px) {
+    .testimonial-area .testimonial h2 {
+      font-size: 40px;
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .testimonial-area .testimonial h2 {
+      font-size: 36px;
+    }
+  }
+  .testimonial-area .testimonial p {
+    margin: 0;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  /* Family area start here */
+  .family-area {
+    position: relative;
+  }
+  .family-area .family-tabbox .nav-tabs {
+    border: none;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+  .family-area .family-tabbox .nav-tabs li {
+    border: none;
+    display: inline-block;
+    float: inherit;
+    margin: 0 -3px;
+  }
+  .family-area .family-tabbox .nav-tabs li a {
+    display: block;
+    background: #965454;
+    color: #fff;
+    line-height: 60px;
+    height: 60px;
+    padding: 0 70px;
+    font-family: "Agency FB";
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-radius: 0;
+    margin: 0;
+    border: none;
+  }
+  @media only screen and (max-width: 480px) {
+    .family-area .family-tabbox .nav-tabs li a {
+      font-size: 24px;
+      padding: 0 35px;
+    }
+  }
+  .family-area .family-tabbox .nav-tabs li.active a {
+    border: none;
+    margin: 0;
+    background: #773b3b;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo {
+    display: block;
+    position: relative;
+    background: #222222;
+    padding: 0 0 30px;
+    -webkit-border-radius: 240px 240px 0 0;
+    -moz-border-radius: 240px 240px 0 0;
+    -ms-border-radius: 240px 240px 0 0;
+    border-radius: 240px 240px 0 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -ms-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo figure {
+    display: block;
+    position: relative;
+    border: 15px solid #fff;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: 0 0 36px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo figure img {
+    width: 100%;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content {
+    display: block;
+    text-align: center;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content h2 {
+    color: #fff;
+    font-family: "Agency FB";
+    font-weight: 400;
+    margin: 0 0 5px;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content p {
+    margin: 0;
+    color: #fff;
+    opacity: 0.5;
+  }
+  .family-area .family-tabbox .tab-content .tab-pane .item .familyinfo:hover {
+    background: #965454;
+  }
+  /* Videos are */
+.videos-area {
+  position: relative;
+  display: block;
+  background: url(../img/bg-2.jpg);
+}
+.videos-area:after {
+  background: rgba(0, 0, 0, 0.85);
+}
+.videos-area .container {
+  position: relative;
+  z-index: 999;
+}
+.videos-area .section-heading h2 {
+  color: #fff;
+}
+.videos-area .section-heading p {
+  color: #fff;
+  opacity: 0.5;
+}
+.videos-area .videos {
+  position: relative;
+  display: block;
+  margin: 20px 0 -225px;
+}
+.videos-area .videos figure {
+  display: block;
+  position: relative;
+  border: 15px solid #fff;
+  z-index: 9999;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.videos-area .videos figure img {
+  width: 100%;
+}
+.videos-area .videos figure a {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin: -50px auto 0;
+  background: #fff;
+  color: #965454;
+  font-size: 30px;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  line-height: 100px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+}
+.videos-area .videos figure a:hover {
+  background: #965454;
+  color: #fff;
+}
+.videos-area .videos figure:hover {
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+}
+
+/*....................................
+20. Gallery area start here
+....................................*/
+.gallery-area {
+  position: relative;
+  padding-top: 325px;
+}
+@media only screen and (max-width: 992px) {
+  .gallery-area {
+    padding-top: 300px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .gallery-area {
+    padding-top: 285px;
+  }
+}
+.gallery-area .gallerys {
+  display: block;
+  position: relative;
+  margin: 0 0 30px;
+}
+.gallery-area .gallerys figure {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+}
+.gallery-area .gallerys figure:after {
+  content: '';
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+  bottom: 10%;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.gallery-area .gallerys figure a {
+  display: block;
+}
+.gallery-area .gallerys figure a img {
+  width: 100%;
+}
+.gallery-area .gallerys figure a span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 999;
+  background: #965454;
+  color: #fff;
+  height: 60px;
+  width: 60px;
+  line-height: 60px;
+  text-align: center;
+  margin: -30px auto 0;
+  transform: scale(0);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.gallery-area .gallerys figure:hover:after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  opacity: 1;
+}
+.gallery-area .gallerys figure:hover a span {
+  transform: scale(1);
+}
+
+/*....................................
+19. Contact area start here
+....................................*/
+.rspv-area {
+  display: block;
+  position: relative;
+  background: url(../img/bg-3.jpg);
+}
+.rspv-area:after {
+  background: #000;
+  opacity: 0.85;
+}
+.rspv-area .container {
+  position: relative;
+  z-index: 999;
+}
+.rspv-area .section-heading h2 {
+  color: #fff;
+}
+.rspv-area .section-heading p {
+  color: #fff;
+  opacity: 0.5;
+}
+.rspv-area .rspv-form {
+  display: block;
+  background: #fff;
+  text-align: center;
+  margin-top: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .rspv-area .rspv-form {
+    margin-top: 65px;
+  }
+}
+.rspv-area .rspv-form h2 {
+  display: inline-block;
+  margin: 0;
+  background: #965454;
+  color: #fff;
+  font-family: "Agency FB";
+  font-weight: 400;
+  line-height: 64px;
+  height: 64px;
+  width: 200px;
+  margin: -32px auto 0;
+  position: absolute;
+  z-index: 999;
+  left: 0;
+  right: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.rspv-area .rspv-form:hover h2 {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.rspv-area .rspv-form form {
+  overflow: hidden;
+  vertical-align: middle;
+  display: block;
+  position: relative;
+  padding: 92px 95px 85px;
+  text-align: left;
+  clear: both;
+}
+.rspv-area .rspv-form form::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+@media only screen and (max-width: 768px) {
+  .rspv-area .rspv-form form {
+    padding: 80px 40px 72px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .rspv-area .rspv-form form {
+    padding: 60px 20px 50px;
+  }
+}
+.rspv-area .rspv-form form fieldset {
+  display: block;
+  margin: 0 0 30px;
+}
+.rspv-area .rspv-form form fieldset label {
+  font-weight: 400;
+  color: #111111;
+  display: block;
+  margin: 0 0 5px;
+}
+.rspv-area .rspv-form form fieldset input {
+  display: block;
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  line-height: 48px;
+  padding: 0 20px;
+  background: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.rspv-area .rspv-form form fieldset input:focus {
+  border: 1px solid #965454;
+}
+.rspv-area .rspv-form form fieldset select {
+  display: block;
+  width: 100%;
+  border: 1px solid #e4e4e4;
+  height: 50px;
+  line-height: 48px;
+  padding: 0 20px;
+  background: #fff;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.rspv-area .rspv-form form fieldset select:focus {
+  border: 1px solid #965454;
+  outline: none;
+}
+.rspv-area .rspv-form form a {
+  margin: 30px 0 0;
+}
+
+.contact-info {
+  position: relative;
+}
+.contact-info .info {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: #f9f9f9;
+  height: 244px;
+  margin: 62px 0 30px;
+}
+.contact-info .info span {
+  width: 124px;
+  height: 124px;
+  line-height: 124px;
+  display: inline-block;
+  margin: -60px auto 0;
+  position: relative;
+  background: #965454;
+  color: #fff;
+  font-size: 40px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.contact-info .info span .fa-phone {
+  transform: rotate(90deg);
+}
+.contact-info .info:hover span {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.contact-info .info .content h2 {
+  margin: 25px 0 15px;
+  font-family: "Agency FB";
+  font-weight: 400;
+  color: #222;
+}
+.contact-info .info .content p {
+  display: block;
+  margin: 0;
+}
+
+/* Map area */
+
+/* Contact info */
+.contact-info {
+  position: relative;
+}
+.contact-info .info {
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: #f9f9f9;
+  height: 244px;
+  margin: 62px 0 30px;
+}
+.contact-info .info span {
+  width: 124px;
+  height: 124px;
+  line-height: 124px;
+  display: inline-block;
+  margin: -60px auto 0;
+  position: relative;
+  background: #965454;
+  color: #fff;
+  font-size: 40px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.contact-info .info span .fa-phone {
+  transform: rotate(90deg);
+}
+.contact-info .info:hover span {
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.contact-info .info .content h2 {
+  margin: 25px 0 15px;
+  font-family: "Agency FB";
+  font-weight: 400;
+  color: #222;
+}
+.contact-info .info .content p {
+  display: block;
+  margin: 0;
+}
+
+/*....................................
+22. Footer area start here
+....................................*/
+footer {
+  position: relative;
+  display: block;
+  background: url(../img/bg-4.jpg);
+  overflow: hidden;
+  vertical-align: middle;
+}
+footer:after {
+  background: rgba(0, 0, 0, 0.85);
+}
+footer .container {
+  position: relative;
+  z-index: 999;
+}
+footer .logo-area {
+  display: block;
+  text-align: center;
+  padding: 100px 0 70px;
+}
+@media only screen and (max-width: 992px) {
+  footer .logo-area {
+    padding: 75px 0 60px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .logo-area {
+    padding: 60px 0 50px;
+  }
+}
+footer .logo-area .content {
+  display: inline-block;
+  position: relative;
+}
+footer .logo-area .content h2 {
+  font-family: "Agency FB";
+  font-weight: 400;
+  color: #fff;
+  font-size: 60px;
+  margin: 0 0 10px;
+}
+@media only screen and (max-width: 768px) {
+  footer .logo-area .content h2 {
+    font-size: 48px;
+  }
+}
+footer .logo-area .content h2 span {
+  color: #965454;
+}
+footer .logo-area .content p {
+  margin: 0;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #965454;
+  padding: 10px 15px;
+  letter-spacing: 2px;
+  border-top: 1px solid #965454;
+  border-bottom: 1px solid #965454;
+}
+@media only screen and (max-width: 480px) {
+  footer .logo-area .content p {
+    font-size: 16px;
+  }
+}
+footer .logo-area .content:after {
+  content: '';
+  position: absolute;
+  left: -219px;
+  top: -42px;
+  bottom: -32px;
+  width: 177px;
+  background: url(../img/2.png) no-repeat left;
+}
+footer .logo-area .content:before {
+  content: '';
+  position: absolute;
+  right: -219px;
+  top: -42px;
+  bottom: -32px;
+  width: 177px;
+  background: url(../img/3.png) no-repeat left;
+}
+footer .contents {
+  text-align: center;
+  padding-bottom: 100px;
+}
+@media only screen and (max-width: 992px) {
+  footer .contents {
+    padding-bottom: 75px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  footer .contents {
+    padding-bottom: 60px;
+  }
+}
+footer .contents h1 {
+  color: #fff;
+  font-family: "Agency FB";
+  font-weight: 400;
+  font-size: 50px;
+  position: relative;
+  padding: 0 0 20px;
+  margin: 0 0 20px;
+}
+@media only screen and (max-width: 768px) {
+  footer .contents h1 {
+    font-size: 46px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  footer .contents h1 {
+    font-size: 36px;
+  }
+}
+@media only screen and (max-width: 320px) {
+  footer .contents h1 {
+    font-size: 30px;
+  }
+}
+footer .contents h1:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background: #965454;
+  width: 250px;
+  margin: 0 auto;
+}
+footer .contents p {
+  margin: 0;
+  font-size: 18px;
+  color: #fff;
+  opacity: 0.5;
 }
