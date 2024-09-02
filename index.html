@@ -502,23 +502,29 @@
             <div class="col-md-6 col-sm-12 col-md-offset-3">
                 <div class="rspv-form">
                     <h2>Анкета</h2>
-                    <form>
+                    <form id="tg">
                         <div class="col-sm-12">
                             <fieldset>
                                 <label>Фамилия Имя:</label>
-                                <input type="text" name="full_name" class="__">
+                                <input type="text" name="full_name" placeholder="Имя Фамилия">
+                            </fieldset>
+                        </div>
+                        <div class="col-sm-12">
+                            <fieldset>
+                                <label>Телефон:</label>
+                                <input type="text" data-mask="phone" name="contact_no" placeholder="Телефон">
                             </fieldset>
                         </div>
                         <div class="col-sm-12">
                             <fieldset>
                                 <label>Email:</label>
-                                <input type="email" name="email" class="__" data-valid="email" data-error="Email should be valid.">
+                                <input type="email" name="email" placeholder="E-mail">
                             </fieldset>
                         </div>
                         <div class="col-sm-6">
                             <fieldset>
                                 <label>Ответ на приглашение:</label>
-                                <select name="guest_no" class="__">
+                                <select name="guest_no" class="">
                                     <option>Я приеду</option>
                                     <option>Я не приеду</option>
                                     <option>Затрудняюсь ответить</option>
@@ -529,6 +535,7 @@
                             <fieldset>
                                 <label>Нас будет (кол-во гостей):</label>
                                 <select name="event_name" class="__">
+                                    <option>0</option>
                                     <option>1</option>
                                     <option>2</option>
                                     <option>3</option>
@@ -541,7 +548,7 @@
                     </div>
                         <div class="col-sm-12 text-center">
                           
-                            <button type="button" class="__submitForm btn1" form-type="inquiry">Отправить</button>
+                            <button type="submit" class="__submitForm btn1" form-type="inquiry">Отправить</button>
                         </div>
                     </form>
                 </div>
@@ -629,6 +636,9 @@
 <script src="js/wow.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/iview.js"></script>
+<script src="js/axios.min.js"></script>
+<script src="js/imask.js"></script>
+<script src="js/telegram.js"></script>
 <script>
     window.onload=function()
     {
@@ -655,6 +665,7 @@
     return false;
     }
 </script>
+
 
 
     
