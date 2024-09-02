@@ -11,12 +11,19 @@ html, body {
   line-height: 26px;
   font-weight: 400;
 }
+
+
 /* ....................................
 1.1 Reset CSS 
 .......................................*/
 img {
   max-width: 100%;
   height: auto;
+}
+video {
+  width: 100%;
+  height: auto;
+  max-height: 100%;
 }
 a {
     -webkit-transition: all 0.5s ease;
@@ -279,109 +286,126 @@ ul {
     list-style-type: none;
     /* font-family: Lora; */
 }
-.shell {
-    max-width: 1210px;
-    padding: 0 15px;
-    margin: 0 auto;
-}
-
-.header {
-    border-bottom: 1px solid #bfbfbf;
-    background-color:#965454;
-    /* font-family: Lora; */
-    color: #fff;
-    font-size: 18px;
-}
-.header__shell {
-    display: flex;
-    /* justify-content: space-between; */
-    justify-content: end;
-    align-items: center;
-}
-.logo {
-    font-weight: 700;
-}
-.nav__list {
-    display: flex;
-    align-items: center;
-    margin: 0;
-}
-.nav__item:not(:first-child) {
-    margin-left: 20px;
-}
-.nav__item {
-    position: relative;
-    padding: 15px 0;
-
-}
-.nav__link--drop::after {
-    content: "";
-    width: 10px;
-    height: 10px;
-    display: inline-block;
-    margin-left: 5px;
-    transition: transform 0.3s;
-}
-.nav__list--dropdown {
-    position: absolute; 
-    background-color: #fff;
-    right: 0;
-    top: 100%;
-    padding: 30px;
-    display: block;
-    box-shadow: 0 5px 15px 0 rgba(0,0,0, 0.2);
-    transition: all 0.3s;
-    opacity: 0;
-    visibility: hidden;
-}
-.burger {
-    width: 40px;
-    height: 20px;
-    cursor: pointer;
-    background-color: transparent;
-    border: none;
-    position: relative;
-    display: none;
-}
-.burger::before,
-.burger::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #fff;
-}
-.burger::after {
-    top: auto;
-    bottom: 0;
-}
-.burger span {
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: 2px;
-    display: inline-block;
-    background-color: #fff;
-}
-.overlay {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0, 0.5);
-    z-index: 99;
-    opacity: 0;
-    visibility: hidden;
-}
-
 /*....................................
 2. Header area start here
 ....................................*/
+header {
+  position: relative;
+}
+header .mobilemenu {
+  height: 60px;
+  line-height: 60px;
+  background: #965454;
+  position: relative;
+  display: none;
+}
+@media only screen and (max-width: 768px) {
+  header .mobilemenu {
+    display: block;
+  }
+}
+header .mobilemenu .mean-container .mean-nav {
+  background: #1D1D22;
+  margin-top: 34px;
+}
+header .mobilemenu .mean-container .mean-nav ul li a {
+  font-size: 13px;
+  padding: 0 5%;
+  line-height: 44px;
+}
+header .mobilemenu .mean-container .mean-nav ul li a.mean-expand {
+  padding: 0;
+  line-height: 44px;
+  height: 44px !important;
+  padding: 0 12px !important;
+}
+header .mobilemenu .mean-container .mean-nav ul li a.mean-expand:hover {
+  background: #1D1D22;
+}
+header .mobilemenu .mean-container .mean-nav ul li a.mean-expand.mean-expand.mean-clicked {
+  background: #1D1D22;
+}
+header .mobilemenu .mean-container .mean-nav ul li a:hover {
+  color: #965454;
+  background: transparent;
+}
+header .mobilemenu .mean-container .mean-bar {
+  background: inherit;
+  padding: 0;
+  min-height: 0;
+  position: absolute;
+  width: auto !important;
+  left: 0;
+  right: 0;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 9999;
+}
+header .mobilemenu .mean-container a.meanmenu-reveal {
+  top: -2px;
+  left: 15px !important;
+  right: 15px !important;
+  background: #965454;
+  height: 10px;
+  padding: 8px 11px 17px;
+}
+header .mobilemenu.sticky2 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999999;
+}
+header .main-menus {
+  display: block;
+  position: relative;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background: #965454;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+header .main-menus .menus {
+  display: block;
+}
+header .main-menus .menus nav ul li {
+  display: inline-block;
+}
+header .main-menus .menus nav ul li a {
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  padding: 0 20px;
+  position: relative;
+  z-index: 999;
+}
+@media only screen and (max-width: 992px) {
+  header .main-menus .menus nav ul li a {
+    padding: 0 10px;
+    font-size: 16px;
+  }
+}
+header .main-menus .menus nav ul li a:hover {
+  color: #e1aeae;
+}
+header .main-menus.sticky {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 60px;
+  line-height: 60px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999999;
+}
+
 .about_title {
   position: relative  
 }
@@ -600,99 +624,8 @@ ul {
 /* Contact --------------------------------------------------*/
 /* Footer ---------------------------------------------------*/
 /* Responsive -----------------------------------------------*/
-@media (max-width: 1024px) {
-}
-
-@media (min-width: 769px) {
-    .nav__link--drop:hover::after {
-        transform: rotate(180deg);
-        transition: all 0.3s;
-    }
-    .nav__item:hover .nav__list--dropdown {
-        visibility: visible;
-        opacity: 1;
-        transition: all 0.3s;
-    }
-}
-@media (max-width: 768px) {
-    .burger {
-        display: block;
-    }
-    .header {
-        padding: 15px 0;
-    }
-    .nav {
-        position: fixed;
-        left: 0;
-        top: 0;
-        max-width: 400px;
-        width: 80%;
-        height: 100vh;
-        z-index: 100;
-        box-shadow: 5px 0 15px -5px rgba(0,0,0, 0.8);
-        background-color: #fff;
-        transform: translateX(-150vw);
-        overflow-x: hidden;
-        overflow-y: auto;
-        background-color:#965454;
-    }
-    .nav__list {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0;
-        padding-top: 10%;
-        position: relative;
-    }
-    .nav__item {
-        margin-left: 0 !important;
-        font-size: 20px;
-        width: 100%;
-        padding: 0;
-        position: static;
-    }
-    .nav__link {
-        padding: 20px 30px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1px solid #bfbfbf;
-    }
-    .nav__link::after {
-        transform: rotate(-90deg);
-    }
-    .nav__list--dropdown {
-        position: absolute;
-        top: 0;
-        right: auto;
-        left: 100%;
-        box-shadow: none;
-        width: 100%;
-        display: none;
-    }
-    .nav__list.transformation {
-        transform: translateX(-100%);
-        transition: all 0.3s;
-    }
-    .nav__list--dropdown.transformation {
-        opacity: 1;
-        visibility: visible;
-        display: block;
-        transform: none;
-        background-color: #fff;
-        transition: all 0.3s;
-    }
-    .nav.open {
-        transform: translateX(0);
-        transition: all 0.3s;
-    }
-    .overlay.open { 
-        opacity: 1;
-        visibility: visible;
-        transition: all 0.3s;
-    }
-  
-}
+@media (max-width: 1024px) {}
+@media (max-width: 768px) {}
 @media (max-width: 540px) {
     .ab_text_3 {
         font-size: 20px;
@@ -730,9 +663,7 @@ ul {
         height: 240px;
       }
 }
-@media (max-width: 320px) {
-
-}
+@media (max-width: 320px) {}
 
 /*....................................
 4. About area start here
@@ -1001,6 +932,7 @@ ul {
   .love-story .love-story-con a {
     padding: 0 65px;
   }
+  
   /*....................................
 21. Event area start here
 ....................................*/
@@ -1332,7 +1264,7 @@ ul {
     padding-top: 285px;
   }
 }
-.gallery-area .gallerys {
+/* .gallery-area .gallerys {
   display: block;
   position: relative;
   margin: 0 0 30px;
@@ -1393,8 +1325,40 @@ ul {
 }
 .gallery-area .gallerys figure:hover a span {
   transform: scale(1);
+} */
+.gap-y {
+  margin-top: 25px;
 }
 
+#bas {
+  position: absolute;
+  z-index: 90;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  background: #000000;
+  opacity: 0.95;
+}
+
+#view {
+  position: absolute;
+  z-index: 91;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#tdt {
+  text-align: center;
+}
+
+.gallerys {
+  text-align: center;
+}
 /*....................................
 19. Contact area start here
 ....................................*/
