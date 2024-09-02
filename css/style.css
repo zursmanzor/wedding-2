@@ -1,8 +1,8 @@
-
 @font-face {
     font-family: Lora;
     src: url(../fonts/Lora-Regular.ttf);
 }
+
 html, body {
   font-size: 16px;
   color: #797979;
@@ -12,19 +12,17 @@ html, body {
   font-weight: 400;
 }
 
-
-/* ....................................
-1.1 Reset CSS 
-.......................................*/
 img {
   max-width: 100%;
   height: auto;
 }
+
 video {
   width: 100%;
   height: auto;
   max-height: 100%;
 }
+
 a {
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
@@ -33,58 +31,64 @@ a {
     transition: all 0.5s ease;
     text-decoration: none;
   }
-  a:hover {
+
+a:hover {
     text-decoration: none;
     color: #096b89;
   }
-  a:active {
+
+a:active {
     outline: 0 none;
     text-decoration: none;
   }
-  a:focus {
+
+a:focus {
     outline: 0px solid;
     text-decoration: none;
   }
+
 p {
     margin: 0 0 26px;
   }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   margin: 0 0 26px;
   font-weight: 600;
 }
+
 ul {
     list-style: outside none none;
     margin: 0;
     padding: 0;
   }
-/*** Section ***/
+
+/* Section ----------------------------------- */
 .section {
     padding: 100px 0;
   }
+
   @media only screen and (max-width: 992px) {
     .section {
       padding: 75px 0;
     }
   }
+
   @media only screen and (max-width: 768px) {
     .section {
       padding: 60px 0;
     }
   }
+
   .section2 {
     padding: 100px 0 70px;
   }
+
   @media only screen and (max-width: 992px) {
     .section2 {
       padding: 75px 0 45px;
     }
   }
+
   @media only screen and (max-width: 768px) {
     .section2 {
       padding: 60px 0 30px;
@@ -94,35 +98,42 @@ ul {
 .section4 {
     padding-bottom: 100px;
   }
+
   @media only screen and (max-width: 992px) {
     .section4 {
       padding-bottom: 75px;
     }
   }
+
   @media only screen and (max-width: 768px) {
     .section4 {
       padding-bottom: 60px;
     }
   }
+
   .section5 {
     padding-top: 100px;
   }
+
   @media only screen and (max-width: 992px) {
     .section5 {
       padding-top: 75px;
     }
   }
+
   @media only screen and (max-width: 768px) {
     .section5 {
       padding-top: 60px;
     }
   }
+
   .section-heading {
     text-align: center;
     display: block;
     position: relative;
     margin: 0 0 40px;
   }
+
   .section-heading h2 {
     font-family: "Agency FB";
     font-weight: 400;
@@ -130,40 +141,48 @@ ul {
     margin: 0 0 15px;
     color: #222222;
   }
+
   @media only screen and (max-width: 992px) {
     .section-heading h2 {
       font-size: 46px;
     }
   }
+
   @media only screen and (max-width: 480px) {
     .section-heading h2 {
       font-size: 36px;
     }
   }
+
   .section-heading p {
     color: #797979;
     margin: 0 auto;
     display: block;
     width: 60%;
   }
+
   @media only screen and (max-width: 992px) {
     .section-heading p {
       width: 85%;
     }
   }
+
   @media only screen and (max-width: 768px) {
     .section-heading p {
       width: 95%;
     }
   }
+
   .bgimgst {
     display: block;
   }
+
   @media only screen and (max-width: 480px) {
     .bgimgst {
       display: none;
     }
   }
+
   .bgimgst:after {
     content: '';
     position: absolute;
@@ -174,6 +193,7 @@ ul {
     z-index: -1;
     background: url(../img/plant_7.png) no-repeat left top;
   }
+
   .bgimgst:before {
     content: '';
     position: absolute;
@@ -184,14 +204,17 @@ ul {
     z-index: -1;
     background: url(../img/plant_8.png) no-repeat right top;
   }
+
   .bgimgsb {
     display: block;
   }
+
   @media only screen and (max-width: 480px) {
     .bgimgsb {
       display: none;
     }
   }
+
   .bgimgsb:after {
     content: '';
     position: absolute;
@@ -202,6 +225,7 @@ ul {
     z-index: -1;
     background: url(../img/plant_6.png) no-repeat left bottom;
   }
+
   .bgimgsb:before {
     content: '';
     position: absolute;
@@ -212,7 +236,8 @@ ul {
     z-index: -1;
     background: url(../img/plant_6.png) no-repeat right bottom;
   }
-  /***Button***/
+
+  /* Button ------------------------------------ */
   .btn1 {
     display: inline-block;
     position: relative;
@@ -235,12 +260,13 @@ ul {
     -o-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+ 
   .btn1:hover {
     background: #773b3b;
     color: #fff;
   }
 
-  /*** Reset ***/
+  /* Reset ------------------------------------- */
   .af:after {
     content: '';
     position: absolute;
@@ -255,16 +281,19 @@ ul {
     background-position: center center !important;
   }
 
-  /*owl Paginations*/
-.family-area .owl-controls {
+  /* Owl Paginations --------------------------- */
+  .family-area .owl-controls {
   margin: 60px 0 0;
 }
+
 .family-area .owl-controls .owl-pagination .owl-page {
   padding: 0 2px;
 }
+
 .response{
 	margin-top:-13px;
 }
+
 .family-area .owl-controls .owl-pagination .owl-page span {
   width: 10px;
   height: 10px;
@@ -273,25 +302,24 @@ ul {
   position: relative;
   margin: 0 3px;
 }
+
 .family-area .owl-controls .owl-pagination .owl-page.active span {
   background: #965454;
 }
 
-/* Home -----------------------------------------------------*/
+/* Home -------------------------------------- */
 a {
     color: inherit;
     text-decoration: none;
 }
 ul {
     list-style-type: none;
-    /* font-family: Lora; */
 }
-/*....................................
-2. Header area start here
-....................................*/
+
 header {
   position: relative;
 }
+
 header .mobilemenu {
   height: 60px;
   line-height: 60px;
@@ -299,36 +327,44 @@ header .mobilemenu {
   position: relative;
   display: none;
 }
+
 @media only screen and (max-width: 768px) {
   header .mobilemenu {
     display: block;
   }
 }
+
 header .mobilemenu .mean-container .mean-nav {
   background: #1D1D22;
   margin-top: 34px;
 }
+
 header .mobilemenu .mean-container .mean-nav ul li a {
   font-size: 13px;
   padding: 0 5%;
   line-height: 44px;
 }
+
 header .mobilemenu .mean-container .mean-nav ul li a.mean-expand {
   padding: 0;
   line-height: 44px;
   height: 44px !important;
   padding: 0 12px !important;
 }
+
 header .mobilemenu .mean-container .mean-nav ul li a.mean-expand:hover {
   background: #1D1D22;
 }
+
 header .mobilemenu .mean-container .mean-nav ul li a.mean-expand.mean-expand.mean-clicked {
   background: #1D1D22;
 }
+
 header .mobilemenu .mean-container .mean-nav ul li a:hover {
   color: #965454;
   background: transparent;
 }
+
 header .mobilemenu .mean-container .mean-bar {
   background: inherit;
   padding: 0;
@@ -341,6 +377,7 @@ header .mobilemenu .mean-container .mean-bar {
   margin-top: -15px;
   z-index: 9999;
 }
+
 header .mobilemenu .mean-container a.meanmenu-reveal {
   top: -2px;
   left: 15px !important;
@@ -349,6 +386,7 @@ header .mobilemenu .mean-container a.meanmenu-reveal {
   height: 10px;
   padding: 8px 11px 17px;
 }
+
 header .mobilemenu.sticky2 {
   position: fixed;
   left: 0;
@@ -359,6 +397,7 @@ header .mobilemenu.sticky2 {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   z-index: 9999999;
 }
+
 header .main-menus {
   display: block;
   position: relative;
@@ -372,12 +411,15 @@ header .main-menus {
   -o-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
+
 header .main-menus .menus {
   display: block;
 }
+
 header .main-menus .menus nav ul li {
   display: inline-block;
 }
+
 header .main-menus .menus nav ul li a {
   display: block;
   color: #fff;
@@ -386,15 +428,18 @@ header .main-menus .menus nav ul li a {
   position: relative;
   z-index: 999;
 }
+
 @media only screen and (max-width: 992px) {
   header .main-menus .menus nav ul li a {
     padding: 0 10px;
     font-size: 16px;
   }
 }
+
 header .main-menus .menus nav ul li a:hover {
   color: #e1aeae;
 }
+
 header .main-menus.sticky {
   position: fixed;
   left: 0;
@@ -406,18 +451,17 @@ header .main-menus.sticky {
   z-index: 9999999;
 }
 
-.about_title {
-  position: relative  
-}
-.about_title .bgimg {
+.bgimg {
   display: block;
 }
+
 @media only screen and (max-width: 480px) {
-  .about_title .bgimg {
+  .bgimg {
     display: none;
   }
 }
-.about_title .bgimg:after {
+
+.bgimg:after {
   content: '';
   position: absolute;
   left: 0;
@@ -427,7 +471,8 @@ header .main-menus.sticky {
   z-index: -1;
   background: url(../img/plant_4.png) no-repeat left bottom;
 }
-.about_title .bgimg:before {
+
+.bgimg:before {
   content: '';
   position: absolute;
   left: 0;
@@ -437,15 +482,18 @@ header .main-menus.sticky {
   z-index: -1;
   background: url(../img/plant_5.png) no-repeat right bottom;
 }
-.about_title .bgimgt {
+
+.bgimgt {
   display: block;
 }
+
 @media only screen and (max-width: 480px) {
-  .about_title .bgimgt {
+   .bgimgt {
     display: none;
   }
 }
-.about_title .bgimgt:after {
+
+.bgimgt:after {
   content: '';
   position: absolute;
   left: 0;
@@ -455,7 +503,8 @@ header .main-menus.sticky {
   z-index: -1;
   background: url(../img/plant_3.png) no-repeat left top;
 }
-.about_title .bgimgt:before {
+
+.bgimgt:before {
   content: '';
   position: absolute;
   left: 0;
@@ -465,43 +514,51 @@ header .main-menus.sticky {
   z-index: -1;
   background: url(../img/plant_3.png) no-repeat right top;
 }
-.about_title .logo-area {
+
+.logo-area {
   display: block;
   text-align: center;
   padding: 100px 0 85px;
 }
+
 @media only screen and (max-width: 992px) {
-  .about_title .logo-area {
+   .logo-area {
     padding: 80px 0 70px;
   }
 }
+
 @media only screen and (max-width: 768px) {
-  .about_title .logo-area {
+   .logo-area {
     padding: 60px 0 50px;
   }
 }
+
 @media only screen and (max-width: 480px) {
-  .about_title .logo-area {
+   .logo-area {
     padding: 50px 0;
     overflow: hidden;
     vertical-align: middle;
   }
 }
-.about_title .logo-area .content {
+
+.logo-area .content {
   display: inline-block;
   position: relative;
 }
-.about_title .logo-area .content h2 {
+
+.logo-area .content h2 {
   font-family: "Agency FB";
   font-weight: 400;
   color: #111111;
   font-size: 60px;
   margin: 0 0 10px;
 }
-.about_title .logo-area .content h2 span {
+
+.logo-area .content h2 span {
   color: #965454;
 }
-.about_title .logo-area .content p {
+
+.logo-area .content p {
   margin: 0;
   font-size: 18px;
   text-transform: uppercase;
@@ -511,7 +568,8 @@ header .main-menus.sticky {
   border-top: 1px solid #965454;
   border-bottom: 1px solid #965454;
 }
-.about_title .logo-area .content:after {
+
+.logo-area .content:after {
   content: '';
   position: absolute;
   left: -219px;
@@ -520,7 +578,8 @@ header .main-menus.sticky {
   width: 177px;
   background: url(../img/plant_1.png) no-repeat left;
 }
-.about_title .logo-area .content:before {
+
+.logo-area .content:before {
   content: '';
   position: absolute;
   right: -219px;
@@ -530,139 +589,14 @@ header .main-menus.sticky {
   background: url(../img/plant_2.png) no-repeat left;
 }
 
-/* About ----------------------------------------------------*/
-.about_head {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-}
-    
-    .box__1 { 
-        grid-area: 1 / 1 / 2 / 3;
-        justify-self: start; 
-}
-    .box__2 { grid-area: 1 / 3 / 2 / 5;
-        justify-self: end;
-}
-    .box__3 { grid-area: 2 / 1 / 3 / 2; }
-    .box__4 { grid-area: 2 / 2 / 3 / 4; }
-    .box__5 { grid-area: 2 / 4 / 3 / 5; }
-    .box__6 { 
-        grid-area: 3 / 1 / 4 / 3;
-        justify-self: start;
-    }
-    .box__7 { grid-area: 3 / 3 / 4 / 5;
-        justify-self: end;
-}
-.ab_bg {
-    /* font-family: Lora; */
-    background-color: #bfbfbf;
-    height: 300px;
-}
-.ab_name {
-    font-size: 60px;
-}
-
-.ab_and {
-    color: #965454;
-}
-.ab_text_1 {
-    font-size: 20px;
-    color: #965454;
-    padding: 10px 0;
-}
-.ab_line {
-    width: auto;
-    height: 2px;
-    background-color: #965454;
-}
-.polygon {
-    display: flex;
-    justify-content: center;
-}
-.triangle-left {
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-right: 50px solid #bfbfbf;
-	border-bottom: 25px solid transparent;
- }
-.triangle-right {
-	width: 0;
-	height: 0;
-	border-top: 25px solid transparent;
-	border-left: 50px solid #bfbfbf;
-	border-bottom: 25px solid transparent;
- }
-.rectangle {
-	width: 400px;
-	height: 50px;
-	background-color: #965454;
-    padding: auto 0;
-    display: flex;
-    justify-content: space-between;
-}
-.ab_text_2 {
-    font-size: 40px;
-    padding-top: 90px;
-}
-.poligon_text {
-    font-size: 30px;
-    color: #fff;
-}
-
-
-/* Story ----------------------------------------------------*/
-
-
-
-/* Event ----------------------------------------------------*/
-/* Rsvp -----------------------------------------------------*/
-/* Family ---------------------------------------------------*/
-/* Gallery --------------------------------------------------*/
-/* Blog -----------------------------------------------------*/
-/* Contact --------------------------------------------------*/
-/* Footer ---------------------------------------------------*/
-/* Responsive -----------------------------------------------*/
 @media (max-width: 1024px) {}
+
 @media (max-width: 768px) {}
-@media (max-width: 540px) {
-    .ab_text_3 {
-        font-size: 20px;
-        height: 150px;
-    }
-    .circle_1 {
-        width: 90px;
-        height: 90px;
-    }
-    .circle_2 {
-        width: 80px;
-        height: 80px;
-    }
-    .timer {
-        font-size: 20px;
-    }
-    .timer__box7, .timer__box8,
-    .timer__box9, .timer__box10 { 
-        text-align: center;
-        width: auto;
-    }
-    
-}
-@media (max-width: 480px) {
-    .ab_name {font-size: 40px;}
-    .box__1, .box__2, .box__3,
-    .box__5, .box__6, .box__7 {
-        display: none;}
-    .ab_text_2 {
-        font-size: 30px;
-        padding-top: 50px;
-        padding-bottom: 60px;
-      }
-    .ab_bg {
-        height: 240px;
-      }
-}
+
+@media (max-width: 540px) {}
+
+@media (max-width: 480px) {}
+
 @media (max-width: 320px) {}
 
 /*....................................
@@ -673,34 +607,41 @@ header .main-menus.sticky {
     position: relative;
     background: url(/img/bg-1.jpg);
   }
+
   @media only screen and (max-width: 768px) {
     .persons-area {
       padding: 60px 0;
     }
   }
+
   .persons-area:after {
     background: rgba(0, 0, 0, 0.85);
   }
+
   .persons-area .container {
     position: relative;
     z-index: 999;
   }
+  
   .persons-area .persons {
     display: block;
     position: relative;
     padding: 0 70px;
     text-align: center;
   }
+  
   @media only screen and (max-width: 992px) {
     .persons-area .persons {
       padding: 0 20px;
     }
   }
+  
   @media only screen and (max-width: 768px) {
     .persons-area .persons {
       margin: 0 0 40px;
     }
   }
+  
   .persons-area .persons figure {
     display: block;
     position: relative;
