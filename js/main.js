@@ -1,39 +1,13 @@
 (function ($) {
  "use strict";
 
+// Mobile Menu Activation -----------------------
 
-
- // Preloader 
-
-	// jQuery(window).on('load', function() {
-
-	// 	jQuery("#status").fadeOut();
-
-	// 	jQuery("#preloader").delay(350).fadeOut("slow");
-
-	// });
-
-
-
-/*----------------------------
-
- 2. Mobile Menu Activation
-
------------------------------*/
-
-    jQuery('.mobile-menu nav').meanmenu({
+	jQuery('.mobile-menu nav').meanmenu({
          meanScreenWidth: "991",
     });
 
-
-
-
-
-/*--------------------------
-
- 3. Sticky Menu 
-
----------------------------- */
+// Sticky Menu ----------------------------------
 
 	 $(window).on('scroll', function(){
 	 	if( $(window).scrollTop()>10 ){
@@ -51,7 +25,7 @@
 	 	}
 	 });
 
-	//Single page scroll js for main menu
+// Single page scroll js for main menu ----------
 
 	 $('.menu_scroll ul li a').on('click' , function(e){
 	 	$('.menu_scroll ul li').removeClass('active');
@@ -80,24 +54,7 @@
 	 	}
 	   });
 
-
-/*----------------------------
-
-4. wow js active
-
------------------------------- */
-
-	// new WOW().init();
-
- 
-
-/*----------------------------
-
-5. owl active
-
------------------------------- */
-
-	//Testimonial Slider
+// Testimonial Slider ---------------------------
 
 	$(".testimonial-slider").owlCarousel({
 	 	autoPlay: true, 
@@ -112,67 +69,7 @@
 	 	itemsMobile : [480,1],
 	});
 
-
-
-	//Gift registry Slider
-
-	// $(".registry_slider").owlCarousel({
-
-	// 	autoPlay: false, 
-
-	// 	slideSpeed:2000,
-
-	// 	pagination:true,
-
-	// 	navigation:false,	  
-
-	// 	items : 3,
-
-	// 	navigationText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
-
-	// 	itemsDesktop : [1199,3],
-
-	// 	itemsDesktopSmall : [992,3],
-
-	// 	itemsTablet: [768,2],
-
-	// 	itemsMobile : [480,1],
-
-	// });
-
-
-
-	//Blog Slider
-
-	// $(".blog-slider").owlCarousel({
-
-	// 	autoPlay: true, 
-
-	// 	slideSpeed:2000,
-
-	// 	pagination:false,
-
-	// 	navigation:false,	  
-
-	// 	items : 3,
-
-	// 	navigationText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],
-
-	// 	itemsDesktop : [1199,3],
-
-	// 	itemsDesktopSmall : [992,3],
-
-	// 	itemsTablet: [768,2],
-
-	// 	itemsMobile : [480,1],
-
-	// });
-
-
-
-
-
-	//Family Slider
+// Family Slider --------------------------------
 
 	$(".familyslider").owlCarousel({
 		autoPlay: true, 
@@ -187,81 +84,7 @@
 		itemsMobile : [480,1],
 	});
 
-
-
-/*--------------------------
-
-6. jarallax active
-
----------------------------- */
-
-	// $('.jarallax').jarallax({
-
-	// 	speed: 0.5
-
-	// });
-
-
-
-/*----------------------------
-
-7. magnific Popup active
-
------------------------------- */
-
-	// $('#gallery').magnificPopup({
-
-	// 	delegate: 'a',
-
-	// 	type: 'image',
-
-	// 	closeOnContentClick: false,
-
-	// 	closeBtnInside: false,
-
-	// 	mainClass: 'mfp-with-zoom mfp-img-mobile',
-
-	// 	image: {
-
-	// 		verticalFit: true,
-
-	// 		titleSrc: function(item) {
-
-	// 			return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
-
-	// 		}
-
-	// 	},
-
-	// 	gallery: {
-
-	// 		enabled: true
-
-	// 	},
-
-	// 	zoom: {
-
-	// 		enabled: true,
-
-	// 		duration: 300,
-
-	// 		opener: function(element) {
-
-	// 			return element.find('img');
-
-	// 		}
-
-	// 	}
-
-	// });
-
-
-
-/*--------------------------
-
- 8. counterdown
-
----------------------------- */
+// counterdown ----------------------------------
 
 	 function e() {
 	     var e = new Date;
@@ -278,208 +101,45 @@
 	    offset: 16
 	 });
 
-// Contact: Маска ввода телефона
-document.addEventListener('DOMContentLoaded', () => {
-	const elements = document.querySelectorAll('[data-mask="phone"]') // ищем все поля с атрибутом data-mask="phone"
-	if (!elements) return // если таких нет, прекращаем выполнение функции
-	const phoneOptions = { // создаем объект параметров
-	  mask: '+{7}(000)000-00-00' // задаем единственный параметр mask
+
+// Contact: Маска ввода телефона ----------------
+
+	document.addEventListener('DOMContentLoaded', () => {
+	const elements = document.querySelectorAll('[data-mask="phone"]')
+	if (!elements) return
+	const phoneOptions = {
+	  mask: '+{7}(000)000-00-00'
 	}
-	elements.forEach(el => { // для каждого найденного поля с атрибутом [data-mask="phone"]
-	  IMask(el, phoneOptions) // инициализируем плагин с установленными выше параметрами
+	elements.forEach(el => {
+	  IMask(el, phoneOptions)
   })
-  })  
+  })
+  
+  window.onload=function()
+    {
+    document.getElementById("pic").onclick=look;
+    document.getElementById("view").onclick=del;
+    };
+    
+    function look(event)
+    {
+    if(event.target.tagName=="IMG")
+       {
+       document.getElementById("photo").src=event.target.src;
+       document.getElementById("view").style.visibility="visible";
+       document.getElementById("bas").style.visibility="visible";
+       }
+    return false;
+    }
+    
+    function del()
+    {
+    document.getElementById("view").style.visibility="hidden";
+    document.getElementById("bas").style.visibility="hidden";
+    document.getElementById("photo").src="img/point.jpg";
+    return false;
+    }
 
-/*--------------------------
 
-9. bxslider active
-
----------------------------- */   
-
-	//Home slider     
-
-	// $('.slider_home').bxSlider({
-
-	// 	mode: 'fade',
-
-	//     speed:3000,
-
-    // 	auto:true
-
-	// });
-
-
-
-/*--------------------------
-
-10. masonry active
-
----------------------------- */	
-
-	// $('#misonary').masonry({
-
-	//   itemSelector: '.m-item'
-
-	// });  
-
-
-
-/*--------------------------
-
-11. scrollUp
-
----------------------------- */	
-
-	// $.scrollUp({
-
-    //     scrollText: '<i class="fas fa-angle-up"></i>',
-
-    //     easingType: 'linear',
-
-    //     scrollSpeed: 900,
-
-    //     animation: 'fade'
-
-    // });
-
-	
-
-	
-
-// Contact Form Submition
-
-	// function checkRequire(formId , targetResp){
-
-	// 	targetResp.html('');
-
-	// 	var email = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/;
-
-	// 	var url = /(http|ftp|https):\/\/[\w-]+(\.[\w-]+)+([\w.,@?^=%&amp;:\/~+#-]*[\w@?^=%&amp;\/~+#-])?/;
-
-	// 	var image = /\.(jpe?g|gif|png|PNG|JPE?G)$/;
-
-	// 	var mobile = /^[\s()+-]*([0-9][\s()+-]*){6,20}$/;
-
-	// 	var facebook = /^(https?:\/\/)?(www\.)?facebook.com\/[a-zA-Z0-9(\.\?)?]/;
-
-	// 	var twitter = /^(https?:\/\/)?(www\.)?twitter.com\/[a-zA-Z0-9(\.\?)?]/;
-
-	// 	var google_plus = /^(https?:\/\/)?(www\.)?plus.google.com\/[a-zA-Z0-9(\.\?)?]/;
-
-	// 	var check = 0;
-
-	// 	$('#er_msg').remove();
-
-	// 	var target = (typeof formId == 'object')? $(formId):$('#'+formId);
-
-	// 	target.find('input , textarea , select').each(function(){
-
-	// 		if($(this).hasClass('require')){
-
-	// 			if($(this).val().trim() == ''){
-
-	// 				check = 1;
-
-	// 				$(this).focus();
-
-	// 				targetResp.html('You missed out some fields.');
-
-	// 				$(this).addClass('error');
-
-	// 				return false;
-
-	// 			}else{
-
-	// 				$(this).removeClass('error');
-
-	// 			}
-
-	// 		}
-
-	// 		if($(this).val().trim() != ''){
-
-	// 			var valid = $(this).attr('data-valid');
-
-	// 			if(typeof valid != 'undefined'){
-
-	// 				if(!eval(valid).test($(this).val().trim())){
-
-	// 					$(this).addClass('error');
-
-	// 					$(this).focus();
-
-	// 					check = 1;
-
-	// 					targetResp.html($(this).attr('data-error'));
-
-	// 					return false;
-
-	// 				}else{
-
-	// 					$(this).removeClass('error');
-
-	// 				}
-
-	// 			}
-
-	// 		}
-
-	// 	});
-
-	// 	return check;
-
-	// }
-
-	// $(".submitForm").on("click", function() {
-
-	// 	var _this = $(this);
-
-	// 	var targetForm = _this.closest('form');
-
-	// 	var errroTarget = targetForm.find('.response');
-
-	// 	var check = checkRequire(targetForm , errroTarget);
-
-	// 	if(check == 0){
-
-	// 		var formDetail = new FormData(targetForm[0]);
-
-	// 		formDetail.append('form_type' , _this.attr('form-type'));
-
-	// 		$.ajax({
-
-	// 			method : 'post',
-
-	// 			url : 'ajax.php',
-
-	// 			data:formDetail,
-
-	// 			cache:false,
-
-	// 			contentType: false,
-
-	// 			processData: false
-
-	// 		}).done(function(resp){
-
-	// 			if(resp == 1){
-
-	// 				targetForm.find('input').val('');
-
-	// 				targetForm.find('textarea').val('');
-
-	// 				errroTarget.html('<p style="color:green;">Mail has been sent successfully.</p>');
-
-	// 			}else{
-
-	// 				errroTarget.html('<p style="color:red;">Something went wrong please try again latter.</p>');
-
-	// 			}
-
-	// 		});
-
-	// 	}
-
-	// });
 
 })(jQuery); 
