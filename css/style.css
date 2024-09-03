@@ -591,16 +591,6 @@ header .main-menus.sticky {
   background: url(../img/plant_2.png) no-repeat left;
 }
 
-@media (max-width: 1024px) {}
-
-@media (max-width: 768px) {}
-
-@media (max-width: 540px) {}
-
-@media (max-width: 480px) {}
-
-@media (max-width: 320px) {}
-
 /* Counter ----------------------------------- */
 .counter-area {
   display: block;
@@ -728,7 +718,7 @@ header .main-menus.sticky {
 
 @media only screen and (max-width: 768px) {
   .love-story {
-    padding: 60px 0;
+    padding: 150px 0;
   }
 }
 
@@ -745,7 +735,14 @@ header .main-menus.sticky {
   color: #222;
 }
 
+@media only screen and (max-width: 640px) {
+  .love-story {
+    padding: 280px 0;
+  }
+}
+
 @media only screen and (max-width: 480px) {
+  .love-story {padding: 50px 0;}
   .love-story .love-story-con h2 {
     font-size: 40px;
   }
@@ -1085,108 +1082,6 @@ header .main-menus.sticky {
     color: #fff;
 }
 
-/* Family ------------------------------------ */
-.family-area {
-    position: relative;
-}
-
-.family-area .family-tabbox .nav-tabs {
-    border: none;
-    text-align: center;
-    margin: 0 0 50px;
-}
-
-.family-area .family-tabbox .nav-tabs li {
-    border: none;
-    display: inline-block;
-    float: inherit;
-    margin: 0 -3px;
-}
-
-.family-area .family-tabbox .nav-tabs li a {
-    display: block;
-    background: #965454;
-    color: #fff;
-    line-height: 60px;
-    height: 60px;
-    padding: 0 70px;
-    font-family: "Agency FB";
-    font-size: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
-    border-radius: 0;
-    margin: 0;
-    border: none;
-}
-
-@media only screen and (max-width: 480px) {
-    .family-area .family-tabbox .nav-tabs li a {
-      font-size: 24px;
-      padding: 0 35px;
-    }
-}
-
-.family-area .family-tabbox .nav-tabs li.active a {
-    border: none;
-    margin: 0;
-    background: #773b3b;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo {
-    display: block;
-    position: relative;
-    background: #222222;
-    padding: 0 0 30px;
-    -webkit-border-radius: 240px 240px 0 0;
-    -moz-border-radius: 240px 240px 0 0;
-    -ms-border-radius: 240px 240px 0 0;
-    border-radius: 240px 240px 0 0;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo figure {
-    display: block;
-    position: relative;
-    border: 15px solid #fff;
-    overflow: hidden;
-    vertical-align: middle;
-    margin: 0 0 36px;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    border-radius: 100%;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo figure img {
-    width: 100%;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content {
-    display: block;
-    text-align: center;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content h2 {
-    color: #fff;
-    font-family: "Agency FB";
-    font-weight: 400;
-    margin: 0 0 5px;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content p {
-    margin: 0;
-    color: #fff;
-    opacity: 0.5;
-}
-
-.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo:hover {
-    background: #965454;
-}
- 
 /* Videos ------------------------------------ */
 .videos-area {
   position: relative;
@@ -1363,6 +1258,108 @@ header .main-menus.sticky {
   .cell_8 {grid-area: 8 / 1 / 9 / 2;}
   .cell_9 {grid-area: 9 / 1 / 10 / 2;}
 
+}
+
+/* Family ------------------------------------ */
+.family-area {
+  position: relative;
+}
+
+.family-area .family-tabbox .nav-tabs {
+  border: none;
+  text-align: center;
+  margin: 0 0 50px;
+}
+
+.family-area .family-tabbox .nav-tabs li {
+  border: none;
+  display: inline-block;
+  float: inherit;
+  margin: 0 -3px;
+}
+
+.family-area .family-tabbox .nav-tabs li a {
+  display: block;
+  background: #965454;
+  color: #fff;
+  line-height: 60px;
+  height: 60px;
+  padding: 0 70px;
+  font-family: "Agency FB";
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-radius: 0;
+  margin: 0;
+  border: none;
+}
+
+@media only screen and (max-width: 480px) {
+  .family-area .family-tabbox .nav-tabs li a {
+    font-size: 24px;
+    padding: 0 35px;
+  }
+}
+
+.family-area .family-tabbox .nav-tabs li.active a {
+  border: none;
+  margin: 0;
+  background: #773b3b;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo {
+  display: block;
+  position: relative;
+  background: #222222;
+  padding: 0 0 30px;
+  -webkit-border-radius: 240px 240px 0 0;
+  -moz-border-radius: 240px 240px 0 0;
+  -ms-border-radius: 240px 240px 0 0;
+  border-radius: 240px 240px 0 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo figure {
+  display: block;
+  position: relative;
+  border: 15px solid #fff;
+  overflow: hidden;
+  vertical-align: middle;
+  margin: 0 0 36px;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  border-radius: 100%;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo figure img {
+  width: 100%;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content {
+  display: block;
+  text-align: center;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content h2 {
+  color: #fff;
+  font-family: "Agency FB";
+  font-weight: 400;
+  margin: 0 0 5px;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo .content p {
+  margin: 0;
+  color: #fff;
+  opacity: 0.5;
+}
+
+.family-area .family-tabbox .tab-content .tab-pane .item .familyinfo:hover {
+  background: #965454;
 }
 
 /* RSPV -------------------------------------- */
